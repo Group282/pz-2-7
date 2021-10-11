@@ -19,6 +19,7 @@
 
 * If user choose all correct numbers, congratulation window will popup with the message "Вітаю ви виграли" 
 * Third screen should contain a table with all results and the best result must be highlighted
+* Use jQuery UI dialog for showing popup
 
 <img width="300" alt="Screenshot 2021-10-10 at 20 57 46" src="https://user-images.githubusercontent.com/10829855/136707976-c67169fd-4db8-4ea6-ad99-2a9b2fcce78d.png">
 
@@ -27,6 +28,7 @@
 * [Изменение документа](https://learn.javascript.ru/modifying-document).
 * [jQuery API Documentation](https://api.jquery.com/).
 * [jQuery](https://jquery.com/).
+* [jQuery UI dialog](https://jqueryui.com/dialog/).
 * [Стили и классы](https://learn.javascript.ru/styles-and-classes).
 * [Хранение данных в браузере](https://learn.javascript.ru/data-storage).
 * [Введение в браузерные события](https://learn.javascript.ru/introduction-browser-events).

@@ -1,0 +1,158 @@
+body{
+  display: flex;
+  justify-content: center;
+  height: 50rem;
+  align-items: center;
+}
+
+p{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: stretch;
+}
+
+p:hover{
+  cursor: grab;
+}
+
+h2,h4{
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  color:black;
+  margin-top: 0;
+}
+
+button{
+  padding: 10px 8px;
+  width: 200px;
+  font-size: 16px;
+  background: cornflowerblue;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  background: #404040;
+}
+
+.button:focus {
+  box-shadow: 0px 0px 0px 1px #0087ff;
+}
+
+.kit_p_style_1{
+  text-shadow: 2px 2px 5px red;
+  font-size: 20px;
+  justify-content: center;
+  display: flex;
+  align-items: stretch;
+}
+
+.kit_p_style_2{
+  color: green;
+  font-weight: bold;
+  font-size: 25px;
+  justify-content: center;
+  display: flex;
+  align-items: stretch;
+}
+
+.kit_p_style_3{
+  color: rebeccapurple;
+  font-style: italic;
+  font-weight: 700;
+  text-shadow: 5px 2px 5px fuchsia;
+  font-size: 12px;
+  justify-content: center;
+  display: flex;
+  align-items: stretch;
+}
+
+.kit_p_style_4{
+  color: orange;
+  font-style: italic;
+  font-family: "Century Gothic";
+  text-shadow: 2px 2px 5px orange;
+  font-weight: 500;
+  font-size: 17px;
+  justify-content: center;
+}
+
+.kit_p_style_5{
+  color: olive;
+  font-style: oblique;
+  font-family: "Arial Black";
+  text-shadow: 2px 2px 5px olivedrab;
+  font-weight: 500;
+  font-size: 15px;
+  justify-content: center;
+}
+
+.kit_game_table{
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+.kit_game_table td {
+  border: 1px solid black;
+  padding: 0px;
+}
+
+.kit_timer_block{
+  display: flex;
+  justify-content: center;
+}
+
+.kit_results_table {
+  width: 250px;
+  margin-bottom: 20px;
+  border: 1px solid #dddddd;
+  border-collapse: collapse;
+}
+
+.kit_results_table th {
+  font-weight: bold;
+  padding: 5px;
+  background: #efefef;
+  border: 1px solid #dddddd;
+}
+
+.kit_results_table td {
+  border: 1px solid #dddddd;
+  padding: 5px;
+}
+
+.kit_first_form{
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  width: 20%;
+}
+
+
+.kit_second_form{
+  display: none;
+}
+
+.kit-results-block{
+  margin-top: 20px;
+}
+
+.kit_second_form_flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#kit_btn_restart{
+  margin-top: 15px;
+}

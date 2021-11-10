@@ -3,8 +3,8 @@ let max = 25
 let sufix = 'kit'
 let counter_games = 1;
 
-let user_sequence_min = 3
-let user_sequence_max = 6
+let user_sequence_min = 1
+let user_sequence_max = 5
 
 if (localStorage.getItem("Results") === null){
   localStorage.setItem("Results",JSON.stringify([]))

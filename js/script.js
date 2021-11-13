@@ -21,7 +21,7 @@ if (localStorage.getItem("Results") === null){
 let msg_error = 'Не вірна цифра'
 let msg_congratulation = 'Вітаю ви виграли'
 
-$('#dialog').dialog({
+$('#message').dialog({
   autoOpen: false,
   show: {
     effect: "fadeIn",
@@ -65,8 +65,8 @@ function startGame() {
   for (let j of arr_1d) {
     document.getElementById(`${j}_id_td`).addEventListener('click', () => {
       if (state_user.length === user_sequence_max - user_sequence_min + 1){
-        $('#msg_dialog').text(msg_congratulation)
-        $( "#dialog" ).dialog( "open" );
+        $('#p_message').text(msg_congratulation)
+        $( "#message" ).dialog( "open" );
         clearInterval(interval);
         let result = {
           name:`Гра ${counter_games++}`,
@@ -86,16 +86,16 @@ function startGame() {
           $('.rno_results_table').append(`<tr><td>${result.name}</td><td>${result.time}</td></tr>`);
           localStorage.setItem("Results",JSON.stringify(results))
         }else{
-          $('#msg_dialog').text('Почніть нову гру')
-          $( "#dialog" ).dialog( "open" );
+          $('#p_message').text('Почніть нову гру')
+          $( "#message" ).dialog( "open" );
         }
       }else {
         if (state_user[state_user.length - 1] + 1 === j){
           state_user.push(j)
           console.log(state_user)
         }else {
-          $('#msg_dialog').text(msg_error)
-          $( "#dialog" ).dialog( "open" );
+          $('#p_message').text(msg_error)
+          $( "#message" ).dialog( "open" );
         }
       }
     })
@@ -104,8 +104,8 @@ function startGame() {
   let timer = 61
   interval = setInterval(() => {
     if (timer === 0) {
-      $('#msg_dialog').text('Час вийшов')
-      $( "#dialog" ).dialog( "open" );
+      $('#p_message').text('Час вийшов')
+      $( "#message" ).dialog( "open" );
       clearInterval(interval);
     } else {
       timer--;

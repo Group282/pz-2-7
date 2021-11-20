@@ -3,15 +3,17 @@ let max = 25
 let sufix = 'kit'
 let counter_games = 1;
 
-let user_sequence_min = 3
-let user_sequence_max = 6
+let user_sequence_min = 1
+let user_sequence_max = 10
 
-if (localStorage.getItem("Results") === null){
-  localStorage.setItem("Results",JSON.stringify([]))
-}else {
+if (localStorage.getItem("Results") === null) {
+  localStorage.setItem("Results", JSON.stringify([]))
+} else {
   let results = JSON.parse(localStorage.getItem("Results"))
-  counter_games = parseInt(results[results.length - 1].name.split(' ')[1]) + 1
-  for (let obj of results){
+  if (results.length !== 0) {
+    counter_games = parseInt(results[results.length - 1].name.split(' ')[1]) + 1
+  }
+  for (let obj of results) {
     $('.kit_results_table').append(`<tr><td>${obj.name}</td><td>${obj.time}</td></tr>`);
   }
 }
@@ -62,38 +64,38 @@ function startGame() {
 
   for (let j of arr_1d) {
     document.getElementById(`${j}_id_td`).addEventListener('click', () => {
-      if (state_user.length === user_sequence_max - user_sequence_min + 1){
+      if (state_user.length === user_sequence_max - user_sequence_min + 1) {
         $('#msg_dialog').text(msg_congratulation)
-        $( "#dialog" ).dialog( "open" );
+        $("#dialog").dialog("open");
         clearInterval(interval);
         let result = {
-          name:`Гра ${counter_games++}`,
+          name: `Гра ${counter_games++}`,
           time: timer.toString()
         }
         let results = JSON.parse(localStorage.getItem("Results"))
         let flag = true
         $(".kit_results_table").children("tr").remove();
-        for (let obj of results){
+        for (let obj of results) {
           $('.kit_results_table').append(`<tr><td>${obj.name}</td><td>${obj.time}</td></tr>`);
-          if (obj.time === result.time ){
+          if (obj.time === result.time) {
             flag = false
           }
         }
-        if (flag){
+        if (flag) {
           results.push(result)
           $('.kit_results_table').append(`<tr><td>${result.name}</td><td>${result.time}</td></tr>`);
-          localStorage.setItem("Results",JSON.stringify(results))
-        }else{
+          localStorage.setItem("Results", JSON.stringify(results))
+        } else {
           $('#msg_dialog').text('Почніть нову гру')
-          $( "#dialog" ).dialog( "open" );
+          $("#dialog").dialog("open");
         }
-      }else {
-        if (state_user[state_user.length - 1] + 1 === j){
+      } else {
+        if (state_user[state_user.length - 1] + 1 === j) {
           state_user.push(j)
           console.log(state_user)
-        }else {
+        } else {
           $('#msg_dialog').text(msg_error)
-          $( "#dialog" ).dialog( "open" );
+          $("#dialog").dialog("open");
         }
       }
     })
@@ -103,7 +105,7 @@ function startGame() {
   interval = setInterval(() => {
     if (timer === 0) {
       $('#msg_dialog').text('Час вийшов')
-      $( "#dialog" ).dialog( "open" );
+      $("#dialog").dialog("open");
       clearInterval(interval);
     } else {
       timer--;

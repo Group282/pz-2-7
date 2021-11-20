@@ -92,7 +92,7 @@ function startGame() {
       } else {
         if (state_user[state_user.length - 1] + 1 === j) {
           state_user.push(j)
-          console.log(state_user)
+          document.getElementById(`${j}_id_td`).textContent = ""
         } else {
           $('#msg_dialog').text(msg_error)
           $("#dialog").dialog("open");

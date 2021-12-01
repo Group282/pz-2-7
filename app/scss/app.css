@@ -1,0 +1,69 @@
+.virsta-start {
+  display: flex;
+  width: 50vw;
+  height: 50vw;
+  flex-direction: column;
+  align-items: center;
+}
+
+.virsta-main {
+  display: flex;
+  width: 60vw;
+  height: 45vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.virsta-finish {
+  display: flex;
+  width: 60vw;
+  height: 45vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.virsta-button {
+  background-color: #008CBA;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 20px;
+  color: white;
+  border: 2px solid black;
+}
+
+.virsta-start > h1 {
+  color: red;
+}
+
+.virsta-display-none {
+  display: none;
+}
+
+.virsta-play {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border: 3px solid black;
+  width: 500px;
+  height: 500px;
+}
+
+.virsta-play-part {
+  display: flex;
+  width: 90px;
+  height: 90px;
+  background-color: white;
+  border: black solid 3px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.virsta-play-part-click {
+  background-color: gray;
+}
+
+/*# sourceMappingURL=app.css.map */

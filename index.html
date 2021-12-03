@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game 1</title>
+  <link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="anlife_first_form">
+  <h2>Гра Anlife</h2>
+  <button id="anlife_btn_start" type="button">Розпочати гру</button>
+</div>
+<div class="anlife_second_form">
+  <h1>Натискайте по черзі від 1 до 10</h1>
+  <div class="anlife_second_form_flex">
+      <div class="anlife_timer_block">
+        <h3>Залишилось: </h3>
+        <h3 class="anlife_timer_tick"></h3>
+      </div>
+      <table class="anlife_game_table">
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      <button id="anlife_btn_restart" type="button">Розпочати спочатку</button>
+  </div>
+
+</div>
+<div id="dialog" title="Повідомлення">
+  <p id="msg_dialog"></p>
+</div>
+<script src="./js/vendor/jquery.min.js"></script>
+<script src="./js/vendor/jquery-ui.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

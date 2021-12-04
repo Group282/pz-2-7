@@ -4,7 +4,7 @@ let sufix = 'anlife'
 let counter_games = 1;
 
 let user_sequence_min = 1
-let user_sequence_max = 10
+let user_sequence_max = 25
 
 if (localStorage.getItem("Results") === null) {
   localStorage.setItem("Results", JSON.stringify([]))
@@ -18,8 +18,8 @@ if (localStorage.getItem("Results") === null) {
   }
 }
 
-let msg_error = 'Не вірна цифра'
-let msg_congratulation = 'Вітаю ви виграли'
+let msg_error = 'Ойцо що ж це сталось'
+let msg_congratulation = 'Перемога'
 
 $('#dialog').dialog({
   autoOpen: false,
@@ -104,7 +104,7 @@ function startGame() {
   let timer = 61
   interval = setInterval(() => {
     if (timer === 0) {
-      $('#msg_dialog').text('Час вийшов')
+      $('#msg_dialog').text('Час минув - і не зупунять навіть його слова "О прекрасна ж ти хвилина, зупенись на віки вічні"')
       $("#dialog").dialog("open");
       clearInterval(interval);
     } else {
